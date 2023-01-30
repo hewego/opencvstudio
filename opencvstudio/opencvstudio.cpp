@@ -14,14 +14,14 @@
 
 // CopencvstudioApp
 
-BEGIN_MESSAGE_MAP(CopencvstudioApp, CWinApp)
+BEGIN_MESSAGE_MAP(COpencvstudioApp, CWinApp)
 	ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
 END_MESSAGE_MAP()
 
 
 // CopencvstudioApp 생성
 
-CopencvstudioApp::CopencvstudioApp()
+COpencvstudioApp::COpencvstudioApp()
 {
 	// TODO: 여기에 생성 코드를 추가합니다.
 	// InitInstance에 모든 중요한 초기화 작업을 배치합니다.
@@ -30,12 +30,13 @@ CopencvstudioApp::CopencvstudioApp()
 
 // 유일한 CopencvstudioApp 개체입니다.
 
-CopencvstudioApp theApp;
+COpencvstudioApp theApp;
+COpencvstudioDlg* theDlg;
 
 
 // CopencvstudioApp 초기화
 
-BOOL CopencvstudioApp::InitInstance()
+BOOL COpencvstudioApp::InitInstance()
 {
 	// 애플리케이션 매니페스트가 ComCtl32.dll 버전 6 이상을 사용하여 비주얼 스타일을
 	// 사용하도록 지정하는 경우, Windows XP 상에서 반드시 InitCommonControlsEx()가 필요합니다.
@@ -74,7 +75,7 @@ BOOL CopencvstudioApp::InitInstance()
 	// 적절한 내용으로 수정해야 합니다.
 	SetRegistryKey(_T("로컬 애플리케이션 마법사에서 생성된 애플리케이션"));
 
-	CopencvstudioDlg dlg;
+	COpencvstudioDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)
@@ -108,3 +109,21 @@ BOOL CopencvstudioApp::InitInstance()
 	return FALSE;
 }
 
+
+void _debugLog(CString sType, TCHAR* lpszFormat, ...)
+{
+	va_list args;
+	va_start(args, lpszFormat);
+
+	int nBuf;
+	TCHAR szBuffer[1024];
+	memset(szBuffer, NULL, sizeof(TCHAR) * 1024);
+	nBuf = _vsntprintf(szBuffer, _countof(szBuffer), lpszFormat, args);
+
+	CString str;
+	if (sType == LOG_MAIN) {
+		static CQueryPerformanceTime pTime;
+		str.Format(_T("[%05d] %s"), pTime.End(), szBuffer);
+		theDlg->SetLog(str);
+	}
+}

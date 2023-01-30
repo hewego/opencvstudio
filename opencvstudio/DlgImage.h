@@ -15,12 +15,16 @@ public:
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);
-
+	virtual BOOL OnInitDialog();
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
 	DECLARE_MESSAGE_MAP()
 
 private:
 	hhLibImageControlUI m_hhImage;
+
 public:
-	virtual BOOL OnInitDialog();
-	virtual BOOL PreTranslateMessage(MSG* pMsg);
+	cv::Mat GetImage();
+	void SetImage(cv::Mat mImg);
+
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 };

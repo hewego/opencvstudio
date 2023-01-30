@@ -23,6 +23,7 @@ void CDlgImage::DoDataExchange(CDataExchange* pDX)
 
 
 BEGIN_MESSAGE_MAP(CDlgImage, CDialogEx)
+	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 
@@ -32,7 +33,7 @@ BOOL CDlgImage::OnInitDialog()
 
 	m_hhImage.Init(GetDlgItem(IDC_STATIC_IMAGE), 1, 0);
 
-	return TRUE;  // return TRUE unless you set the focus to a control
+	return TRUE;
 }
 
 
@@ -40,4 +41,22 @@ BOOL CDlgImage::PreTranslateMessage(MSG* pMsg)
 {
 
 	return CDialogEx::PreTranslateMessage(pMsg);
+}
+
+
+cv::Mat CDlgImage::GetImage()
+{
+	return m_hhImage.GetImage();
+}
+
+
+void CDlgImage::SetImage(cv::Mat mImg)
+{
+	m_hhImage.SetImage(mImg);
+}
+
+
+void CDlgImage::OnSize(UINT nType, int cx, int cy)
+{
+	CDialogEx::OnSize(nType, cx, cy);
 }

@@ -13,12 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ExternalControl">
+      <UniqueIdentifier>{2c68a2e5-3b03-4549-bb84-40da61e353a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExternalControl\hhLibImage">
+      <UniqueIdentifier>{bc6a67c2-4455-4753-ac09-daf6c732de74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExternalControl\QueryPerformanceTime">
+      <UniqueIdentifier>{d75bd9b7-69d2-47f2-addd-ce43b7bb9654}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="opencvstudio.h">
+    <ClInclude Include="Opencvstudio.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="opencvstudioDlg.h">
+    <ClInclude Include="OpencvstudioDlg.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -39,12 +48,21 @@
     <ClInclude Include="DlgFunThreshold.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="..\externalControl\hhLibImageControl\hhLibImageControlUI.h">
+      <Filter>ExternalControl\hhLibImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externalControl\QueryPerformanceTime\QueryPerformanceTime.h">
+      <Filter>ExternalControl\QueryPerformanceTime</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFunThresholdA.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="opencvstudio.cpp">
+    <ClCompile Include="Opencvstudio.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="opencvstudioDlg.cpp">
+    <ClCompile Include="OpencvstudioDlg.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
@@ -54,6 +72,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="DlgFunThreshold.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externalControl\QueryPerformanceTime\QueryPerformanceTime.cpp">
+      <Filter>ExternalControl\QueryPerformanceTime</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunThresholdA.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

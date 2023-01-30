@@ -2,14 +2,17 @@
 
 #include "DlgImage.h"
 
-class CopencvstudioDlg : public CDialogEx
+class COpencvstudioDlg : public CDialogEx
 {
 public:
-	CopencvstudioDlg(CWnd* pParent = nullptr);
+	COpencvstudioDlg(CWnd* pParent = nullptr);
 
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_OPENCVSTUDIO_DIALOG };
 #endif
+
+private:
+	CListBox m_ListboxLog;
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);
@@ -29,8 +32,10 @@ protected:
 	virtual void OnCancel();
 
 public:
-	CDlgImage m_DlgImg[6];
-
+	CDlgImage m_DlgImg[DEF_MAX_VIEW];
 	CObList m_oblist_dlgTh;
+	CObList m_oblist_dlgATh;
 	void ResetDlg();
+	void SetLog(CString sLog);
+	afx_msg void OnBnClickedMfcbuttonFunAth();
 };

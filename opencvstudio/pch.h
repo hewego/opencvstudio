@@ -22,6 +22,10 @@ using namespace concurrency;
 using namespace std;
 
 
+//
+//
+#define DEF_MAX_VIEW 6
+
 
 //
 //Log
@@ -58,22 +62,9 @@ using namespace std;
 
 
 //
-//QueryPerformanceTime
 #include "..\\ExternalControl\\QueryPerformanceTime\\QueryPerformanceTime.h"
-
-
-//
-//LabelCtrl
 #include "..\\ExternalControl\\LabelCtrl\\LabelCtrl.h"
-
-
-//
-//INIFile
 #include "..\\ExternalControl\\INIFile\\INIFile.h"
-
-
-//
-//Safequeue
 #include "..\\ExternalControl\\safequeue\\safequeue.h"
 
 
