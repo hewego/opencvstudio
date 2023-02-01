@@ -28,14 +28,26 @@ protected:
 	afx_msg void OnViewImage4();
 	afx_msg void OnViewImage5();
 	afx_msg void OnViewImage6();
-	afx_msg void OnBnClickedMfcbuttonFunTh();
 	virtual void OnCancel();
+	afx_msg void OnBnClickedMfcbuttonFunTh();
+	afx_msg void OnBnClickedMfcbuttonFunAth();
+	afx_msg void OnBnClickedMfcbuttonFunOperation();
+	afx_msg void OnBnClickedMfcbuttonFunContrast();
+	afx_msg void OnBnClickedMfcbuttonFunCvtcolor();
+
+private:
+	CString GetVer();
+	CString GetDate();
 
 public:
 	CDlgImage m_DlgImg[DEF_MAX_VIEW];
-	CObList m_oblist_dlgTh;
-	CObList m_oblist_dlgATh;
+	CObList m_oblist_dlg_th;
+	CObList m_oblist_dlg_ath;
+	CObList m_oblist_dlg_Operation;
+	CObList m_oblist_dlg_Contrast;
+	CObList m_oblist_dlg_CvtColor;
+
+public:
 	void ResetDlg();
 	void SetLog(CString sLog);
-	afx_msg void OnBnClickedMfcbuttonFunAth();
 };

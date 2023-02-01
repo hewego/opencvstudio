@@ -31,6 +31,10 @@ BOOL CDlgImage::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
+	CString str;
+	str.Format(_T("Image %d"), m_nNo);
+	SetWindowText(str);
+
 	m_hhImage.Init(GetDlgItem(IDC_STATIC_IMAGE), 1, 0);
 
 	return TRUE;
@@ -59,4 +63,10 @@ void CDlgImage::SetImage(cv::Mat mImg)
 void CDlgImage::OnSize(UINT nType, int cx, int cy)
 {
 	CDialogEx::OnSize(nType, cx, cy);
+}
+
+
+void CDlgImage::Init(int nNo)
+{
+	m_nNo = nNo;
 }

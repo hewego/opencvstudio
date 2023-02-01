@@ -57,6 +57,15 @@
     <ClInclude Include="DlgFunThresholdA.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="DlgFunOperation.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFunContrast.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFunCvtColor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Opencvstudio.cpp">
@@ -78,6 +87,15 @@
       <Filter>ExternalControl\QueryPerformanceTime</Filter>
     </ClCompile>
     <ClCompile Include="DlgFunThresholdA.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunOperation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunContrast.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunCvtColor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
