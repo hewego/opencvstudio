@@ -22,3 +22,11 @@ public:
 extern COpencvstudioApp theApp;
 extern COpencvstudioDlg* theDlg;
 extern void _debugLog(CString sType, TCHAR* lpszFormat, ...);
+extern int _getDlgItemInt(CWnd* pWnd, int nID);
+extern DOUBLE _getDlgItemDb(CWnd* pWnd, int nID);
+extern CString _getDlgItemStr(CWnd* pWnd, int nID);
+extern int _makeOdd(int nVal);
+extern int _str2int(CString str, CString strCut);
+extern CString _int2str(int nValue);
+extern double _str2db(CString sVal);
+extern CString _db2str(DOUBLE dbVal);

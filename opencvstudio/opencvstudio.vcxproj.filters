@@ -22,6 +22,9 @@
     <Filter Include="ExternalControl\QueryPerformanceTime">
       <UniqueIdentifier>{d75bd9b7-69d2-47f2-addd-ce43b7bb9654}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ExternalControl\Grid">
+      <UniqueIdentifier>{9d7a6ed6-ece2-4922-8f88-9cc256403b01}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Opencvstudio.h">
@@ -66,6 +69,42 @@
     <ClInclude Include="DlgFunCvtColor.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="DlgFunFilter.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFunMorphology.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFunCuda.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFunMatch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\CellRange.h">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\GridCell.h">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\GridCellBase.h">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\GridCtrl.h">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\GridDropTarget.h">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\InPlaceEdit.h">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\MemDC.h">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\TitleTip.h">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Opencvstudio.cpp">
@@ -97,6 +136,36 @@
     </ClCompile>
     <ClCompile Include="DlgFunCvtColor.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunFilter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunMorphology.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunCuda.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunMatch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\GridCell.cpp">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\GridCellBase.cpp">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\GridCtrl.cpp">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\GridDropTarget.cpp">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\InPlaceEdit.cpp">
+      <Filter>ExternalControl\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\TitleTip.cpp">
+      <Filter>ExternalControl\Grid</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

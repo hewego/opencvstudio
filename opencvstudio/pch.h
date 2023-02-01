@@ -66,7 +66,8 @@ using namespace std;
 #include "..\\ExternalControl\\LabelCtrl\\LabelCtrl.h"
 #include "..\\ExternalControl\\INIFile\\INIFile.h"
 #include "..\\ExternalControl\\safequeue\\safequeue.h"
-
+#include "..\ExternalControl\GridCtrl\GridCtrl_src\GridCtrl.h"
+#include "..\ExternalControl\GridCtrl\NewCellTypes\GridCellCombo.h"
 
 
 #endif //PCH_H

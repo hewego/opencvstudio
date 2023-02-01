@@ -102,3 +102,60 @@ void _debugLog(CString sType, TCHAR* lpszFormat, ...)
 		theDlg->SetLog(str);
 	}
 }
+
+
+int _getDlgItemInt(CWnd* pWnd, int nID)
+{
+	return pWnd->GetDlgItemInt(nID);
+}
+
+
+DOUBLE _getDlgItemDb(CWnd* pWnd, int nID)
+{
+	CString str;
+	pWnd->GetDlgItemText(nID, str);
+	return _ttof(str);
+}
+
+
+CString _getDlgItemStr(CWnd* pWnd, int nID)
+{
+	CString str;
+	pWnd->GetDlgItemText(nID, str);
+	return str;
+}
+
+int _makeOdd(int nVal)
+{
+	if ((nVal % 2) == 0) {
+		return  nVal + 1;
+	}
+
+	return nVal;
+}
+
+int _str2int(CString str, CString strCut)
+{
+	str.Replace(_T(" "), _T(""));
+	str.Replace(strCut, _T(""));
+	return _ttoi(str);
+}
+
+CString _int2str(int nValue)
+{
+	CString str;
+	str.Format(_T("%d"), nValue);
+	return str;
+}
+
+double _str2db(CString sVal)
+{
+	return _ttof(sVal);
+}
+
+CString _db2str(DOUBLE dbVal)
+{
+	CString str;
+	str.Format(_T("%.2f"), dbVal);
+	return str;
+}

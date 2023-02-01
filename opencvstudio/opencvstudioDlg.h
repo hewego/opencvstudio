@@ -34,6 +34,10 @@ protected:
 	afx_msg void OnBnClickedMfcbuttonFunOperation();
 	afx_msg void OnBnClickedMfcbuttonFunContrast();
 	afx_msg void OnBnClickedMfcbuttonFunCvtcolor();
+	afx_msg void OnBnClickedMfcbuttonFunFilter();
+	afx_msg void OnBnClickedMfcbuttonFunMorp();
+	afx_msg void OnBnClickedMfcbuttonFunCuda();
+	afx_msg void OnBnClickedMfcbuttonFunMatch();
 
 private:
 	CString GetVer();
@@ -46,6 +50,10 @@ public:
 	CObList m_oblist_dlg_Operation;
 	CObList m_oblist_dlg_Contrast;
 	CObList m_oblist_dlg_CvtColor;
+	CObList m_oblist_dlg_Filter;
+	CObList m_oblist_dlg_Morp;
+	CObList m_oblist_dlg_Cuda;
+	CObList m_oblist_dlg_Match;
 
 public:
 	void ResetDlg();

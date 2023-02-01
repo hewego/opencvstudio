@@ -51,7 +51,6 @@ BOOL CDlgFunContrast::OnInitDialog()
 
 void CDlgFunContrast::OnBnClickedMfcbuttonApply()
 {
-	//Input
 	cv::Mat matSrc = theDlg->m_DlgImg[((CComboBox*)GetDlgItem(IDC_COMBO_SRC))->GetCurSel()].GetImage();
 	if (matSrc.rows <= 0) {
 		AfxMessageBox(_T("No image selected"));
@@ -73,6 +72,5 @@ void CDlgFunContrast::OnBnClickedMfcbuttonApply()
 	}
 	_debugLog(LOG_MAIN, _T("contrast end"));
 
-	//Output
 	theDlg->m_DlgImg[((CComboBox*)GetDlgItem(IDC_COMBO_DST))->GetCurSel()].SetImage(matDst);
 }

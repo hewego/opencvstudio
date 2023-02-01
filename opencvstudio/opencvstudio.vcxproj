@@ -199,10 +199,22 @@ copy ..\externalControl\hhLibImageControl\hhLibImageControl.dll ..\bin\hhLibImag
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\CellRange.h" />
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\GridCell.h" />
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\GridCellBase.h" />
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\GridCtrl.h" />
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\GridDropTarget.h" />
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\InPlaceEdit.h" />
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\MemDC.h" />
+    <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\TitleTip.h" />
     <ClInclude Include="..\externalControl\hhLibImageControl\hhLibImageControlUI.h" />
     <ClInclude Include="..\externalControl\QueryPerformanceTime\QueryPerformanceTime.h" />
     <ClInclude Include="DlgFunContrast.h" />
+    <ClInclude Include="DlgFunCuda.h" />
     <ClInclude Include="DlgFunCvtColor.h" />
+    <ClInclude Include="DlgFunFilter.h" />
+    <ClInclude Include="DlgFunMatch.h" />
+    <ClInclude Include="DlgFunMorphology.h" />
     <ClInclude Include="DlgFunOperation.h" />
     <ClInclude Include="DlgFunThreshold.h" />
     <ClInclude Include="DlgFunThresholdA.h" />
@@ -215,9 +227,19 @@ copy ..\externalControl\hhLibImageControl\hhLibImageControl.dll ..\bin\hhLibImag
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\GridCell.cpp" />
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\GridCellBase.cpp" />
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\GridCtrl.cpp" />
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\GridDropTarget.cpp" />
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\InPlaceEdit.cpp" />
+    <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\TitleTip.cpp" />
     <ClCompile Include="..\externalControl\QueryPerformanceTime\QueryPerformanceTime.cpp" />
     <ClCompile Include="DlgFunContrast.cpp" />
+    <ClCompile Include="DlgFunCuda.cpp" />
     <ClCompile Include="DlgFunCvtColor.cpp" />
+    <ClCompile Include="DlgFunFilter.cpp" />
+    <ClCompile Include="DlgFunMatch.cpp" />
+    <ClCompile Include="DlgFunMorphology.cpp" />
     <ClCompile Include="DlgFunOperation.cpp" />
     <ClCompile Include="DlgFunThreshold.cpp" />
     <ClCompile Include="DlgFunThresholdA.cpp" />

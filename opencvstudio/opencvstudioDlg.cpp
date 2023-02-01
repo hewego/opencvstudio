@@ -9,6 +9,10 @@
 #include "DlgFunOperation.h"
 #include "DlgFunContrast.h"
 #include "DlgFunCvtColor.h"
+#include "DlgFunFilter.h"
+#include "DlgFunMorphology.h"
+#include "DlgFunCuda.h"
+#include "DlgFunMatch.h"
 
 #pragma comment (lib, "Version.lib")
 
@@ -74,6 +78,10 @@ BEGIN_MESSAGE_MAP(COpencvstudioDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_OPERATION, &COpencvstudioDlg::OnBnClickedMfcbuttonFunOperation)
 	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_CONTRAST, &COpencvstudioDlg::OnBnClickedMfcbuttonFunContrast)
 	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_CVTCOLOR, &COpencvstudioDlg::OnBnClickedMfcbuttonFunCvtcolor)
+	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_FILTER, &COpencvstudioDlg::OnBnClickedMfcbuttonFunFilter)
+	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_MORP, &COpencvstudioDlg::OnBnClickedMfcbuttonFunMorp)
+	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_CUDA, &COpencvstudioDlg::OnBnClickedMfcbuttonFunCuda)
+	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_MATCH, &COpencvstudioDlg::OnBnClickedMfcbuttonFunMatch)
 END_MESSAGE_MAP()
 
 
@@ -262,6 +270,7 @@ void COpencvstudioDlg::SetLog(CString sLog)
 
 void COpencvstudioDlg::ResetDlg()
 {
+	//Th
 	if (m_oblist_dlg_th.GetSize() != 0) {
 		POSITION pos;
 		CDlgFunThreshold* pDlg;
@@ -273,7 +282,7 @@ void COpencvstudioDlg::ResetDlg()
 		m_oblist_dlg_th.RemoveAll();
 	}
 
-
+	//ATh
 	if (m_oblist_dlg_ath.GetSize() != 0) {
 		POSITION pos;
 		CDlgFunThresholdA* pDlg;
@@ -285,7 +294,7 @@ void COpencvstudioDlg::ResetDlg()
 		m_oblist_dlg_ath.RemoveAll();
 	}
 
-
+	//Operation
 	if (m_oblist_dlg_Operation.GetSize() != 0) {
 		POSITION pos;
 		CDlgFunOperation* pDlg;
@@ -297,7 +306,7 @@ void COpencvstudioDlg::ResetDlg()
 		m_oblist_dlg_ath.RemoveAll();
 	}
 
-
+	//Contrast
 	if (m_oblist_dlg_Contrast.GetSize() != 0) {
 		POSITION pos;
 		CDlgFunContrast* pDlg;
@@ -307,6 +316,18 @@ void COpencvstudioDlg::ResetDlg()
 			pDlg = NULL;
 		}
 		m_oblist_dlg_ath.RemoveAll();
+	}
+
+	//Filter
+	if (m_oblist_dlg_Filter.GetSize() != 0) {
+		POSITION pos;
+		CDlgFunFilter* pDlg;
+		for (pos = m_oblist_dlg_Filter.GetHeadPosition(); pos != NULL; ) {
+			pDlg = (CDlgFunFilter*)m_oblist_dlg_Filter.GetNext(pos);
+			delete pDlg;
+			pDlg = NULL;
+		}
+		m_oblist_dlg_Filter.RemoveAll();
 	}
 }
 
@@ -373,5 +394,57 @@ void COpencvstudioDlg::OnBnClickedMfcbuttonFunCvtcolor()
 		pDlg->Create(IDD_DLG_FUN_CVTCOLOR);
 		pDlg->ShowWindow(SW_SHOW);
 		m_oblist_dlg_CvtColor.AddTail(pDlg);
+	}
+}
+
+
+void COpencvstudioDlg::OnBnClickedMfcbuttonFunFilter()
+{
+	static int count = 0;
+	CDlgFunFilter* pDlg = NULL;
+	pDlg = new CDlgFunFilter;
+	if (pDlg != NULL) {
+		pDlg->Create(IDD_DLG_FUN_FILTER);
+		pDlg->ShowWindow(SW_SHOW);
+		m_oblist_dlg_Filter.AddTail(pDlg);
+	}
+}
+
+
+void COpencvstudioDlg::OnBnClickedMfcbuttonFunMorp()
+{
+	static int count = 0;
+	CDlgFunMorphology* pDlg = NULL;
+	pDlg = new CDlgFunMorphology;
+	if (pDlg != NULL) {
+		pDlg->Create(IDD_DLG_FUN_MORPHOLOGY);
+		pDlg->ShowWindow(SW_SHOW);
+		m_oblist_dlg_Morp.AddTail(pDlg);
+	}
+}
+
+
+void COpencvstudioDlg::OnBnClickedMfcbuttonFunCuda()
+{
+	static int count = 0;
+	CDlgFunCuda* pDlg = NULL;
+	pDlg = new CDlgFunCuda;
+	if (pDlg != NULL) {
+		pDlg->Create(IDD_DLG_FUN_CUDA);
+		pDlg->ShowWindow(SW_SHOW);
+		m_oblist_dlg_Cuda.AddTail(pDlg);
+	}
+}
+
+
+void COpencvstudioDlg::OnBnClickedMfcbuttonFunMatch()
+{
+	static int count = 0;
+	CDlgFunMatch* pDlg = NULL;
+	pDlg = new CDlgFunMatch;
+	if (pDlg != NULL) {
+		pDlg->Create(IDD_DLG_FUN_MATCH);
+		pDlg->ShowWindow(SW_SHOW);
+		m_oblist_dlg_Match.AddTail(pDlg);
 	}
 }
