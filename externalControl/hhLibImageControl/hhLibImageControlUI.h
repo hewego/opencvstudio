@@ -19,7 +19,6 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 지원입니다.
 	DECLARE_MESSAGE_MAP()
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
-	afx_msg void OnSize(UINT nType, int cx, int cy);
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -34,6 +33,8 @@ protected:
 	afx_msg void OnMenuRoiShow();
 	afx_msg void OnMenuRoiExport();
 	afx_msg void OnMenuImageInfo();
+	afx_msg void OnImagerotateFlipvertical();
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 
 private:
 	void UpdateRatio();
@@ -41,8 +42,10 @@ private:
 
 private:
 	CImageControl* m_pImageControl;
+	CWnd* m_pParentWnd;
 	bool m_bUseRoi;
 	DOUBLE m_dbPixelRes; //um단위
+	int m_StartPointTop;
 
 private:
 	bool m_bThemeBlack;
@@ -57,5 +60,4 @@ public:
 	cv::Mat GetImage();
 	cv::Rect GetRoi();
 	void SetRoi(BOOL bShow, cv::Rect rt = cv::Rect(0,0,0,0));
-	afx_msg void OnImagerotateFlipvertical();
 };

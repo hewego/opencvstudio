@@ -20,6 +20,9 @@
 #define IDD_DLG_FUN_MORPHOLOGY          141
 #define IDD_DLG_FUN_CUDA                142
 #define IDD_DLG_FUN_MATCH               143
+#define IDD_DLG_FUN_LABEL               144
+#define IDD_DLG_FUN_USBCAMERA           145
+#define IDD_DLG_FUN_CONTOURS            148
 #define IDC_MFCBUTTON_FUN_TH            1000
 #define IDC_STATIC_IMAGE                1001
 #define IDC_MFCBUTTON_FUN_ATH           1001
@@ -48,9 +51,11 @@
 #define IDC_COMBO_METHOD2               1011
 #define IDC_EDIT_CANNY_TH2              1011
 #define IDC_MFCBUTTON_LOAD              1011
+#define IDC_BUTTON_LABEL_RESET          1011
 #define IDC_EDIT_BS                     1012
 #define IDC_COMBO_SRC1                  1012
 #define IDC_MFCBUTTON_FUN_FITLINE       1012
+#define IDC_COMBO_DRAWLINE_THICKNESS    1012
 #define IDC_EDIT_C                      1013
 #define IDC_COMBO_SRC2                  1013
 #define IDC_EDIT_ALPHA                  1013
@@ -62,7 +67,10 @@
 #define IDC_EDIT_EROSION_KERNAL2        1015
 #define IDC_EDIT_K_SIZE                 1015
 #define IDC_MFCBUTTON_FUN_HOUGHCIRCLE   1015
+#define IDC_EDIT_BRIGHTNESS             1015
 #define IDC_EDIT_EROSION_ITER           1016
+#define IDC_EDIT_BRIGHTNESS2            1016
+#define IDC_EDIT_CONTRAST               1016
 #define IDC_BUTTON_APPLY_EROSION        1017
 #define IDC_MFCBUTTON_ROTATE            1017
 #define IDC_EDIT_DILATION_KERNAL1       1018
@@ -75,17 +83,30 @@
 #define IDC_STATIC_LAYOUT_IMG           1020
 #define IDC_BUTTON_APPLY_DILATION       1021
 #define IDC_MFCBUTTON_MORP              1021
+#define IDC_COMBO_CONNECTIVITY          1021
 #define IDC_EDIT_GAUSSIANBLUR_KSIZE     1022
+#define IDC_MFCBUTTON_GRAB              1022
 #define IDC_EDIT_GAUSSIANBLUR_SIGMAX    1023
+#define IDC_MFCBUTTON_OPEN              1023
 #define IDC_EDIT_GAUSSIANBLUR_SIGMAY    1024
+#define IDC_MFCBUTTON_SHOT              1024
 #define IDC_BUTTON_APPLY_GAUSSIANBLUR   1025
+#define IDC_MFCBUTTON_TO_IMAGE          1025
 #define IDC_EDIT_SOBEL_DEPTH            1026
+#define IDC_COMBO_EXPOSURE              1026
 #define IDC_EDIT_MEDIANBLUR_KSIZE       1027
+#define IDC_COMBO_DEVICE                1027
 #define IDC_BUTTON_APPLY_MEDIANBLUR     1028
+#define IDC_MFCBUTTON_CARD_SCAN         1028
 #define IDC_BUTTON_APPLY_SOBEL          1029
+#define IDC_MFCBUTTON_CARD_SAVE         1029
 #define IDC_BUTTON_APPLY_SOBEL_1        1030
+#define IDC_EDIT_CARD_CAMPANY           1030
 #define IDC_EDIT_SOBEL_SCALE            1031
+#define IDC_EDIT_CARD_NAME              1031
+#define IDC_SLIDER_BRIGHTNESS           1031
 #define IDC_EDIT_SOBEL_DELTA            1032
+#define IDC_SLIDER_CONTRAST             1032
 #define IDC_COMBO_SOBEL_BORDERTYPE      1033
 #define IDC_COMBO_SOBEL_DY              1034
 #define IDC_COMBO_SOBEL_DX              1035
@@ -124,14 +145,15 @@
 #define ID_VIEW_IMAGE5                  32775
 #define ID_VIEW_IMAGE6                  32776
 #define ID_FILE                         32777
+#define ID_FUNCTIONTEST_USBCAMERA       32778
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        138
-#define _APS_NEXT_COMMAND_VALUE         32778
-#define _APS_NEXT_CONTROL_VALUE         1021
+#define _APS_NEXT_RESOURCE_VALUE        151
+#define _APS_NEXT_COMMAND_VALUE         32779
+#define _APS_NEXT_CONTROL_VALUE         1032
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

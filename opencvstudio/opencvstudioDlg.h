@@ -38,6 +38,9 @@ protected:
 	afx_msg void OnBnClickedMfcbuttonFunMorp();
 	afx_msg void OnBnClickedMfcbuttonFunCuda();
 	afx_msg void OnBnClickedMfcbuttonFunMatch();
+	afx_msg void OnBnClickedMfcbuttonFunLabel();
+	afx_msg void OnFunctionTestUsbCamera();
+	afx_msg void OnBnClickedMfcbuttonFunContours();
 
 private:
 	CString GetVer();
@@ -54,6 +57,8 @@ public:
 	CObList m_oblist_dlg_Morp;
 	CObList m_oblist_dlg_Cuda;
 	CObList m_oblist_dlg_Match;
+	CObList m_oblist_dlg_Label;
+	CObList m_oblist_dlg_Contours;
 
 public:
 	void ResetDlg();

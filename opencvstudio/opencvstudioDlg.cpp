@@ -13,6 +13,9 @@
 #include "DlgFunMorphology.h"
 #include "DlgFunCuda.h"
 #include "DlgFunMatch.h"
+#include "DlgFunLabel.h"
+#include "DlgFunContours.h"
+#include "DlgFunUsbCamera.h"
 
 #pragma comment (lib, "Version.lib")
 
@@ -82,6 +85,9 @@ BEGIN_MESSAGE_MAP(COpencvstudioDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_MORP, &COpencvstudioDlg::OnBnClickedMfcbuttonFunMorp)
 	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_CUDA, &COpencvstudioDlg::OnBnClickedMfcbuttonFunCuda)
 	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_MATCH, &COpencvstudioDlg::OnBnClickedMfcbuttonFunMatch)
+	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_LABEL, &COpencvstudioDlg::OnBnClickedMfcbuttonFunLabel)
+	ON_COMMAND(ID_FUNCTIONTEST_USBCAMERA, &COpencvstudioDlg::OnFunctionTestUsbCamera)
+	ON_BN_CLICKED(IDC_MFCBUTTON_FUN_CONTOURS, &COpencvstudioDlg::OnBnClickedMfcbuttonFunContours)
 END_MESSAGE_MAP()
 
 
@@ -109,7 +115,6 @@ BOOL COpencvstudioDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);
 	SetIcon(m_hIcon, FALSE);
 
-	// TODO: 여기에 추가 초기화 작업을 추가합니다.
 	CString str;
 	str.Format(_T("OpencvStudio %s"), GetVer());
 	SetWindowText(str);
@@ -255,6 +260,13 @@ void COpencvstudioDlg::OnViewImage6()
 }
 
 
+void COpencvstudioDlg::OnFunctionTestUsbCamera()
+{
+	CDlgFunUsbCamera pDlg;
+	pDlg.DoModal();
+}
+
+
 void COpencvstudioDlg::OnCancel()
 {
 	ResetDlg();
@@ -328,6 +340,18 @@ void COpencvstudioDlg::ResetDlg()
 			pDlg = NULL;
 		}
 		m_oblist_dlg_Filter.RemoveAll();
+	}
+
+	//Contours
+	if (m_oblist_dlg_Contours.GetSize() != 0) {
+		POSITION pos;
+		CDlgFunContours* pDlg;
+		for (pos = m_oblist_dlg_Contours.GetHeadPosition(); pos != NULL; ) {
+			pDlg = (CDlgFunContours*)m_oblist_dlg_Contours.GetNext(pos);
+			delete pDlg;
+			pDlg = NULL;
+		}
+		m_oblist_dlg_Contours.RemoveAll();
 	}
 }
 
@@ -446,5 +470,31 @@ void COpencvstudioDlg::OnBnClickedMfcbuttonFunMatch()
 		pDlg->Create(IDD_DLG_FUN_MATCH);
 		pDlg->ShowWindow(SW_SHOW);
 		m_oblist_dlg_Match.AddTail(pDlg);
+	}
+}
+
+
+void COpencvstudioDlg::OnBnClickedMfcbuttonFunLabel()
+{
+	static int count = 0;
+	CDlgFunLabel* pDlg = NULL;
+	pDlg = new CDlgFunLabel;
+	if (pDlg != NULL) {
+		pDlg->Create(IDD_DLG_FUN_LABEL);
+		pDlg->ShowWindow(SW_SHOW);
+		m_oblist_dlg_Match.AddTail(pDlg);
+	}
+}
+
+
+void COpencvstudioDlg::OnBnClickedMfcbuttonFunContours()
+{
+	static int count = 0;
+	CDlgFunContours* pDlg = NULL;
+	pDlg = new CDlgFunContours;
+	if (pDlg != NULL) {
+		pDlg->Create(IDD_DLG_FUN_CONTOURS);
+		pDlg->ShowWindow(SW_SHOW);
+		m_oblist_dlg_Contours.AddTail(pDlg);
 	}
 }

@@ -104,6 +104,17 @@ void _debugLog(CString sType, TCHAR* lpszFormat, ...)
 }
 
 
+CString _curDir()
+{
+	CString str;
+	TCHAR szCurDir[MAX_PATH];
+	memset(szCurDir, 0, sizeof(szCurDir));
+	GetCurrentDirectory(MAX_PATH, szCurDir);
+	str.Format(_T("%s"), szCurDir);
+	return str;
+}
+
+
 int _getDlgItemInt(CWnd* pWnd, int nID)
 {
 	return pWnd->GetDlgItemInt(nID);

@@ -22,6 +22,7 @@ public:
 extern COpencvstudioApp theApp;
 extern COpencvstudioDlg* theDlg;
 extern void _debugLog(CString sType, TCHAR* lpszFormat, ...);
+extern CString _curDir();
 extern int _getDlgItemInt(CWnd* pWnd, int nID);
 extern DOUBLE _getDlgItemDb(CWnd* pWnd, int nID);
 extern CString _getDlgItemStr(CWnd* pWnd, int nID);

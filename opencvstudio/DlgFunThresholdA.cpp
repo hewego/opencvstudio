@@ -128,4 +128,5 @@ void CDlgFunThresholdA::OnBnClickedMfcbuttonApply()
 
 	//Output
 	theDlg->m_DlgImg[((CComboBox*)GetDlgItem(IDC_COMBO_DST))->GetCurSel()].SetImage(matDst);
+	theDlg->m_DlgImg[((CComboBox*)GetDlgItem(IDC_COMBO_DST))->GetCurSel()].ShowWindow(SW_SHOW);
 }

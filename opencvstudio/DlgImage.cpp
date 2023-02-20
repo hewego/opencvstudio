@@ -62,6 +62,21 @@ void CDlgImage::SetImage(cv::Mat mImg)
 
 void CDlgImage::OnSize(UINT nType, int cx, int cy)
 {
+	if (GetDlgItem(IDC_STATIC_IMAGE)->GetSafeHwnd() == NULL) {
+		return;
+	}
+
+	CRect rt;
+	GetWindowRect(rt);
+	ScreenToClient(rt);
+
+	CRect rcPic;
+	GetDlgItem(IDC_STATIC_IMAGE)->GetClientRect(&rcPic);
+	ScreenToClient(&rcPic);
+
+	GetDlgItem(IDC_STATIC_IMAGE)->SetWindowPos(NULL, rcPic.left, rcPic.top, rt.Width() - 29, rt.Height() - 53, SWP_NOMOVE);
+	m_hhImage.SendMessage(WM_SIZE);
+
 	CDialogEx::OnSize(nType, cx, cy);
 }
 

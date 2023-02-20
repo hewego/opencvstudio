@@ -105,6 +105,15 @@
     <ClInclude Include="..\externalControl\GridCtrl\GridCtrl_src\TitleTip.h">
       <Filter>ExternalControl\Grid</Filter>
     </ClInclude>
+    <ClInclude Include="DlgFunLabel.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFunUsbCamera.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFunContours.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Opencvstudio.cpp">
@@ -166,6 +175,15 @@
     </ClCompile>
     <ClCompile Include="..\externalControl\GridCtrl\GridCtrl_src\TitleTip.cpp">
       <Filter>ExternalControl\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunLabel.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunUsbCamera.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFunContours.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
